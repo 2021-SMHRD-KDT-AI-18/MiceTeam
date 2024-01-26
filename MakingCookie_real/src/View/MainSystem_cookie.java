@@ -31,6 +31,8 @@ Scanner sc =new Scanner(System.in);
 				+"악당을 물리치고 마을에 다시 평화가 찾아오게끔, 쿠키는 용감한 용사로서의 자부심을 얻는다.\r\n";
 		
 		
+		
+		
 		for(int i =0;i<text.length();i++) {
 			System.out.print(text.charAt(i));
 			
@@ -60,6 +62,13 @@ Scanner sc =new Scanner(System.in);
 		int Character =sc.nextInt();
 		
 		if(Character ==1) {
+			System.out.println("");
+			
+			
+			
+			
+			
+			
 			
 		}else if(Character==2) {
 			

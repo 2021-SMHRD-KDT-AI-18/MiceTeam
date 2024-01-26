@@ -13,20 +13,10 @@ public class MainSystem {
 		// TODO Auto-generated method stub
 
 		Scanner sc = new Scanner(System.in);
-         //MVC Pattern (Design Pattern 일종)
-		// model view controller
-		// Model : 데이터를 묶고 데이터 베이스에 접근하는 역할(DAO)
-		//View :Client 에게 화면에 보여주고 안내하고 입력받는 역할(Main System)
-		//Controller:View와 Model을 이어주는 역할 .조종(Controller)
-		
-		//Controller 객체 생성
+       
 		MemberController controller  = new MemberController();
 		
-		 //  VIEW CONTROLLER DAO
-		//모든 기능에서 사용 할 수 있도록 전역변수 dto,dao 생성
 		MemberDTO dto =null;
-		//MemberDAO dao =new MemberDAO(); <VIEW에서는 DAO를 사용하지않는다 따라서 주석처리
-		
 		
 		
 		while (true) {
