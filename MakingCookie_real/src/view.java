@@ -5,6 +5,7 @@ public class view {
 		// TODO Auto-generated method stub
 		System.err.println("개빡");
 		System.out.println("화각 많이 난 상태 ");
+		System.out.println("화가 개많이 난 상태");
 
 	}
 
