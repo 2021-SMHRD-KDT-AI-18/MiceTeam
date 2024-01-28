@@ -169,7 +169,7 @@ public class MainSystem_cookie {
 					+ day + "번째 날\r\n" 
 					+ "남은 훈련횟수: " + traincnt + "\r\n"
 					+ "=======================================================\r\n"
-					+ "1.근력 훈련 2.민첩 훈련 3.체력 훈련 4.휴식 취하기 5.악당과 전투6.쿠키 진화\r\n"
+					+ "1.근력 훈련 2.민첩 훈련 3.체력 훈련 4.휴식 취하기 5.악당과 전투 6.쿠키 진화\r\n"
 					+ "=======================================================\r\n"
 					+ "오늘 쿠키와 훈련 할 방법을 선택해주세요\r\n");
 			
@@ -189,9 +189,6 @@ public class MainSystem_cookie {
 			} else if (menu==4 && traincnt>0) {
 				System.out.println(cookieName+"가 휴식을 취합니다 체력이 완전히 회복됩니다");
 				nowHp=maxHp;
-			}else if(traincnt==0) {
-				System.out.println("훈련 횟수를 모두 사용하여 자동으로 전투로 넘어갑니다");
-			           menu=5;
 			}else if(menu==5) {
 				System.out.println("..,...,..........................,......,,,...,,. \r\n"
 						+ "......,..........,,,...,,,,..,,........,,,.....,. \r\n"
@@ -284,13 +281,8 @@ public class MainSystem_cookie {
 				}else if(command==2) {
 					System.out.println("겁쟁이 쿠키는 부리나케 도망쳤다.");
 					break;
-				}else {
-					System.out.println("잘못눌렀습니다 1 또는 2를 입력해주세요");
-					break;
 				}
-				
-			
-			
+					
 			} else if(menu==6) {
 				if(exp >= 100) {
 					System.out.println(cookieName+"의 힘이 넘쳐나고 있습니다 쿠키의 진화를 선택해주세요 ");
