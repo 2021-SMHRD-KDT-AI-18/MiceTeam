@@ -60,7 +60,7 @@ public class MainSystem {
               if(info != null) {
                System.out.println(info.getName()+"님 환영합니다");
               }
-                
+              break;  
 			} else if (menu == 3) {
 				System.out.println("========전체 회원 목록 조회=======");
 				System.out.println("ID\tPW\tName\tAGE");
