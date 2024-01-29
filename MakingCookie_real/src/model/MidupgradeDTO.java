@@ -1,6 +1,6 @@
 package model;
 
-public class midupgrade {
+public class MidupgradeDTO {
 
 	
 	private String grade;
@@ -9,13 +9,8 @@ public class midupgrade {
 	private int dex;
 	private int maxHp;
 	
-	
-	
-	
-	
 
-
-	public midupgrade(String grade, int exp, int atk, int dex, int maxHp) {
+	public MidupgradeDTO(String grade, int exp, int atk, int dex, int maxHp) {
 		super();
 		this.grade = grade;
 		this.exp = exp;
