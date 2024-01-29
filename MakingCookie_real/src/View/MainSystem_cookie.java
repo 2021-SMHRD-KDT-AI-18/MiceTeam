@@ -129,9 +129,9 @@ public class MainSystem_cookie {
 				break;
 			} else {
 				System.out.println("정확한 숫자입력해주세요");
-			}
+			} 
 
-		}
+		} 
 
 		ArrayList<enemy> enemys = new ArrayList<>();
 		enemy enemy1 = new enemy1("세균맨", 5, 50);
@@ -363,8 +363,33 @@ public class MainSystem_cookie {
 						}
 
 					}
+				}if(grade.equals("중급")){
+					
+					
+					
+					
+					
+					
+					
+					
 				}
-			}
+				
+				
+				
+				
+				
+				
+			} 
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
 		}
 	}
 
