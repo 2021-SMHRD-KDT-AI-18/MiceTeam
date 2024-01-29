@@ -171,7 +171,7 @@ MemberController controller  = new MemberController();
 		int enemyHp = 0;
 		int enemyAtk = 0;
 
-	
+		
 
 		String text = " 평화로운 쿠키마을에 사는 용맹한 전사 쿠키는 어느 날, 악당 초코몬스터와 그의 부하들이 공격해왔다. 마을은 파괴되고 주민들은 위협받고 있었다."
 				+ " 쿠키는 자신의 마을을 지키기 위해 전사로 일어나 악당에 맞서기로 결심한다. "
@@ -182,7 +182,7 @@ MemberController controller  = new MemberController();
 			System.out.print(text.charAt(i));
 
 			try {
-				Thread.sleep(50);
+				Thread.sleep(0);
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -220,63 +220,47 @@ MemberController controller  = new MemberController();
 					+ "=================================\r\n");
 
 			while (true) {
+				if (traincnt == 0) {
+					System.out.println();
+					System.out.println();
+					System.out.println("================================================\r\n"
+							+ "훈련 횟수를 전부 소진했습니다 마을을 지키기 위한 전투를 준비하십시오\r\n"
+							+ "================================================");
+				}
 				System.out.println("\r\n" + day + "번째 날\r\n" + "남은 훈련횟수: " + traincnt + "\r\n"
 						+ "============================================================\r\n"
 						+ "1.근력 훈련 2.민첩 훈련 3.체력 훈련 4.휴식 취하기 5.악당과 전투 6.쿠키 진화\r\n"
 						+ "============================================================\r\n"
 						+ "오늘 쿠키와 훈련 할 방법을 선택해주세요\r\n");
 
+				
 				int menu = sc.nextInt();
 				if (menu == 1 && traincnt > 0) {
 					atk += 5000;
 					traincnt--;
 					System.out.println(cookieName + "가 쇠질을 하며 공격력이 올라갔습니다. 현재 공격력: " + atk);
 
-					if (traincnt == 0) {
-						System.out.println();
-						System.out.println();
-						System.out.println("================================================\r\n"
-								+ "훈련 횟수를 전부 소진했습니다 마을을 지키기 위한 전투를 준비하십시오\r\n"
-								+ "================================================");
-
-					}
+					
 				} else if (menu == 2 && traincnt > 0) {
 					dex += 5;
 					traincnt--;
 					System.out.println(cookieName + "가 민첩 훈련을 하며 민첩성이 올라갔습니다 현재 민첩성 :" + dex);
-					if (traincnt == 0) {
-						System.out.println();
-						System.out.println();
-						System.out.println("================================================\r\n"
-								+ "훈련 횟수를 전부 소진했습니다 마을을 지키기 위한 전투를 준비하십시오\r\n"
-								+ "===============================================");
-
-					}
+					
 				} else if (menu == 3 && traincnt > 0) {
 					maxHp += 10;
 					nowHp += 10;
 					traincnt--;
 					System.out.println(cookieName + "가 유산소 운동을 하며 체력이 올라갔습니다 현재 체력" + maxHp);
-					if (traincnt == 0) {
-						System.out.println();
-						System.out.println();
-						System.out.println("================================================\r\n"
-								+ "훈련 횟수를 전부 소진했습니다 마을을 지키기 위한 전투를 준비하십시오\r\n"
-								+ "================================================");
+					
+						
 
-					}
+					
 				} else if (menu == 4 && traincnt > 0) {
 					System.out.println(cookieName + "가 휴식을 취합니다 체력이 완전히 회복됩니다");
 					nowHp = maxHp;
 					traincnt--;
-					if (traincnt == 0) {
-						System.out.println();
-						System.out.println();
-						System.out.println("================================================\r\n"
-								+ "훈련 횟수를 전부 소진했습니다 마을을 지키기 위한 전투를 준비하십시오\r\n"
-								+ "================================================");
+					
 
-					}
 
 				} else if (menu == 5) {
 					if (grade.equals("하급")) {
@@ -349,7 +333,6 @@ MemberController controller  = new MemberController();
 
 							} else if (upgrade == 2) {
 								System.out.println();
-
 								System.out.print(cookieName + "가 ");
 								cookieName = "레슬러 쿠키";
 								System.out.println(cookieName + "(이)가 되었습니다" + cookieName
