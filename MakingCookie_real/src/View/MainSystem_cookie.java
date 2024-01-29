@@ -12,7 +12,6 @@ import model.enemy3;
 public class MainSystem_cookie {
 
 	public static void main(String[] args) {
-<<<<<<< HEAD
      
 MemberController controller  = new MemberController();
 		
@@ -37,14 +36,9 @@ MemberController controller  = new MemberController();
 						+ "               .@@#-      =*.      *@@=  !!       *@@:      .@@@       ;!.      !@@; .=@#,          \r\n"
 						+ "                ---                ,--,           ,--.       ---                ,--,  ,!-           ");
 		
-=======
 
-		MemberController controller = new MemberController();
+		
 
-		MemberDTO dto = null;
-		Scanner sc = new Scanner(System.in);
-
->>>>>>> branch 'main' of https://github.com/2021-SMHRD-KDT-AI-18/MiceTeam
 		while (true) {
 			// CRUD create read update delete 최소한의 기능들
 			System.out.println("1.회원등록 2.로그인 3.회원목록 4.회원탈퇴 5.회원정보수정 6.종료 >>");
@@ -172,32 +166,12 @@ MemberController controller  = new MemberController();
 		String enemyName = null;
 		int day = 1;
 		int traincnt = 5;
-<<<<<<< HEAD
-        int enemyHp=0;
-        int enemyAtk=0;
+
 		
-		
-=======
 		int enemyHp = 0;
 		int enemyAtk = 0;
 
-		System.out.println(
-				" ------------.  ,------- :!!:  -------- :!!-    .-------     ,------- ~!!~  ---.          \r\n"
-						+ "           $@@@@@@@@@@@~  =@@@@@@# *@@= .$@@@@@@@ *@@:   #@@@@@@@@@!   *@@@@@@@ !@@; ,#@@:          \r\n"
-						+ "           $@@@@@@@@@@@~  =@@@@@@@ *@@= .$@@@@@@@ *@@:  *@@@@@@@@@@@~ .=@@@@@@@ !@@; ,@@@:          \r\n"
-						+ "           -~~~~~~~~#@@-  -~~~!@@@ *@@=  -~~~#@@@ *@@: .=@@!~~~~~$@@:  -~~~@@@@ !@@; ,@@@:          \r\n"
-						+ "           ~;;;;;;;;#@@-      ;@@@ *@@=      #@@# *@@: .$@@:    .=@@:      #@@@ !@@; ,@@@~          \r\n"
-						+ "           $@@@@@@@@@@@-  -~~~$@@@ *@@=  ,~~~@@@* *@@:  *@@@@@@@@@@@~      #@@= !@@; ,@@@~          \r\n"
-						+ "           $@@@@@@@@@@@-  =@@@@@@= *@@=  =@@@@@@~ *@@:  ,@@@@@@@@@@=.      #@@- !@@; ,@@@~          \r\n"
-						+ "                    =@@-  =@@@@@@, *@@=  =@@@@@@  *@@:    .;;;;;;:        ,@@@. !@@; .$@@-          \r\n"
-						+ "           -~~~~~~~~;!!:     *@@@  *@@=     =@@$  *@@: .~~~~~~~~~~~~-     *@@#  !@@; .=@#,          \r\n"
-						+ "          .$@@@@@@@@@@@@    -#@@;  *@@=    -@@@:  *@@: -@@@@@@@@@@@@=    ,#@@;  !@@;  *@#.          \r\n"
-						+ "          .$@@@@@@@@@@@@   .@@@#,  *@@=   -@@@=   *@@: -@@@@@@@@@@@@=   -@@@$   !@@;                \r\n"
-						+ "           ;****@@@=****  $@@@@~   *@@= -#@@@#-   *@@: ,!****@@@****: ,#@@@#~   !@@;  ;@!.          \r\n"
-						+ "               .@@@-      =@@=-    *@@= .$@@*,    *@@:      .@@@       =@@*,    !@@; ,#@@~          \r\n"
-						+ "               .@@#-      =*.      *@@=  !!       *@@:      .@@@       ;!.      !@@; .=@#,          \r\n"
-						+ "                ---                ,--,           ,--.       ---                ,--,  ,!-           ");
->>>>>>> branch 'main' of https://github.com/2021-SMHRD-KDT-AI-18/MiceTeam
+	
 
 		String text = " 평화로운 쿠키마을에 사는 용맹한 전사 쿠키는 어느 날, 악당 초코몬스터와 그의 부하들이 공격해왔다. 마을은 파괴되고 주민들은 위협받고 있었다."
 				+ " 쿠키는 자신의 마을을 지키기 위해 전사로 일어나 악당에 맞서기로 결심한다. "
