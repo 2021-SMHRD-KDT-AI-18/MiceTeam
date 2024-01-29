@@ -18,6 +18,11 @@ public class MidupgradeDTO {
 		this.dex = dex;
 		this.maxHp = maxHp;
 	}
+	public MidupgradeDTO() {
+		
+		
+		return ;
+	}
 	public String getGrade() {
 		return grade;
 	}
