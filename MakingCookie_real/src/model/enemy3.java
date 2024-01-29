@@ -4,6 +4,11 @@ import View.enemy;
 
 public class enemy3 extends enemy{
 
+	public enemy3(String name, int enemyAtk, int enemyHp) {
+		super(name, enemyAtk, enemyHp);
+		
+	}
+
 	@Override
 	public void fight() {
 
@@ -68,8 +73,8 @@ public class enemy3 extends enemy{
 						+ "악당의정보\r\n"
 						+ "=========================\r\n"
 						+ "이름:세균맨\r\n"
-						+ "공격력:"+enemyAtk+"\r\n"
-						+ "체력:"+enemyHp+"\r\n"
+						+ "공격력:"+getEnemyAtk()+"\r\n"
+						+ "체력:"+getEnemyHp()+"\r\n"
 						+ "등급:잔챙이\r\n"
 						+ "====================\r\n");
 		

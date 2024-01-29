@@ -1,6 +1,11 @@
 package View;
 
+import java.util.ArrayList;
 import java.util.Scanner;
+
+import model.enemy1;
+
+
 
 public class MainSystem_cookie {
 
@@ -47,11 +52,34 @@ public class MainSystem_cookie {
 
 				}
 		
-
-			 enemy enemy= new enemy();
+           ArrayList<enemy>enemys = new ArrayList<>();
+			 enemy enemy1= new enemy1("세균맨",5,50);
+			 enemy enemy2= new enemy1("추종자",50,500);
+			 enemy enemy3= new enemy1("악마",100,1000);
+			 
+			  enemys.add(enemy1);
+			  enemys.add(enemy2);
+			  enemys.add(enemy3);
+			  //악당1 능력치
+			 String name0=enemys.get(0).getName();
+			 int enemyAtk0=enemys.get(0).getEnemyAtk();
+			 int enemyHp0=enemys.get(0).getEnemyHp();
+			 //악당 2 능력치
+			 String name1=enemys.get(1).getName();
+			 int enemyAtk1=enemys.get(1).getEnemyAtk();
+			 int enemyHp1=enemys.get(1).getEnemyHp();
+			 
+			 //악당 3 능력치
+			 String name2=enemys.get(2).getName();
+			 int enemyAtk2=enemys.get(2).getEnemyAtk();
+			 int enemyHp2=enemys.get(2).getEnemyHp();
+			 
+			 
+//			 System.out.printf("%s,%d,%d",name0,enemyAtk0,enemyHp0);
+			 
 			int atk = 10;
 			int dex = 10;
-			int maxHp = 100;
+			int maxHp=100;
 			int nowHp=100;
 			int exp = 0;
 		    String grade="하급";
@@ -77,73 +105,10 @@ public class MainSystem_cookie {
 		int Character =sc.nextInt();
 		
 		if(Character ==1) {
-			System.out.println("@@@@@@=;:;!;!;*@@@@@@@@@@\r\n"
-					+ "@@@@@!:,,,,,,,. @@@@@@@@@\r\n"
-					+ "@@@@=-,,,,,,, .~*@@@@@@@@\r\n"
-					+ "@@ *,,,. ,.. .,,~*@@@@@@@\r\n"
-					+ "@@     ,,  ,,,,,,-=@@@@@@\r\n"
-					+ "@@=--,,,,,,,,..,,-*@@@@@@\r\n"
-					+ "@@=,,,...,,,.~-,,,*@@@@@@\r\n"
-					+ "@@=,,,.~: ..!;!.,,*@@@@@@\r\n"
-					+ "@@=,,,---~,.--- ,,*@@@@@@\r\n"
-					+ "@@=,,,.,, ,.,,,.,,*@@.  @\r\n"
-					+ "@@=~,,,,,,,,,,,,,-=@ ..  \r\n"
-					+ "@@@!,,,,,,,,,,,,,!=@ .@ ,\r\n"
-					+ "@@@=:,,,,,,,,,,,;@@-,,@. \r\n"
-					+ "@@@@@:,,,,,,,,,*@@@  @@  \r\n"
-					+ "@@@@==:;-,,,,;~=@@@  @@  \r\n"
-					+ "@@=;-,,,,,,,,,,,!@@ @@@@@\r\n"
-					+ "@=,,,,,,,, ,,,,,-=-,@@@@@\r\n"
-					+ "!,,,,,,,,-..,,,,,:. @@@@@\r\n"
-					+ "!~---*,,,,.,,,,,,, .@@@@@\r\n"
-					+ "@=~~~~*,,,- ,,~,,,,=@@@@@\r\n"
-					+ "@$*~~::,,,.,,,-=, .:@@@@@\r\n"
-					+ "@@@===,,,,,,,,~=: .:@@@@@\r\n"
-					+ "@@@@@=,,,,,,,,~=; ,=@@@@@\r\n"
-					+ "@@@@@;,,,--,,,~=,-=@@@@@@\r\n"
-					+ "@@@@@:,,,==,,,~= @@@@@@@@\r\n"
-					+ "@@@@=:,,,=@;,,,* @@@@@@@@\r\n"
-					+ "@@@@=-,,~=@;,,,* @@@@@@@@\r\n"
-					+ "@@@@=,,,:@@;,,,*@@@@@@@@@\r\n"
-					+ "@@@@=,,,:@@=,,,*=@@@@@@@@\r\n"
-					+ "@@@@=!;!=@@=*;!*@@@@@@@@@");
+			
 			cookieName="용감한 쿠키";
 		}else if(Character==2) {
-			System.out.println("@@@@@@@!;:;!;@@@@@@@@@@@@@@@@@\r\n"
-					+ "@@@@@*:.....:*@@@@@@@@@@@@@@@@\r\n"
-					+ "@@@@@;.......,!@@@@@@@@@@@@@@@\r\n"
-					+ "@@@@!,.........;!@@@@@@@@@@@@@\r\n"
-					+ "@@@*,...........:*@@@@@@@@@@@@\r\n"
-					+ "@@#-,............:*@@@@@@@@@@@\r\n"
-					+ "@@! ..............!=@@@@@@@@@@\r\n"
-					+ "@!-................*.~ .  @@@@\r\n"
-					+ "@!, ...............~- ..   @@@\r\n"
-					+ "*~..................!... .. .@\r\n"
-					+ "*,....,.............!. .   ..@\r\n"
-					+ "*.... -!!!!!!;,.....!.. .     \r\n"
-					+ "!..,~,.,..... .;....!        .\r\n"
-					+ "!..: .;~... !!! :...!  .   .  \r\n"
-					+ "*.,. !!!.,. ;;! ;,.,~     .   \r\n"
-					+ "*~,. !;:,,. !:- ;..;,    . .  \r\n"
-					+ "@!.:,-;- ,., . --.:,,.       .\r\n"
-					+ "@@!,-,.,,....,:-.;--,,.    .. \r\n"
-					+ "@@@!,,~::::~-,.!=!,--,,.     @\r\n"
-					+ "@@@@*!,.......~!!*-;----,   @@\r\n"
-					+ "@@@@*;!... ,..!;!..-!;---@ @@@\r\n"
-					+ "@@@!,!!,...  .!!....!@@@@@@@@@\r\n"
-					+ "@@@~..;~.,....!,....!@@@@@@@@@\r\n"
-					+ "@@@~...- . ,..-.....!@@@@@@@@@\r\n"
-					+ "@@@:..-.......-....,*@@@@@@@@@\r\n"
-					+ "@@@!,,,.......,...,*@@@@@@@@@@\r\n"
-					+ "@@@@!~........ -,~*!@@@@@@@@@@\r\n"
-					+ "@@@*~-.........~~*!!@@@@@@@@@@\r\n"
-					+ "@@@*~...........,*!@@@@@@@@@@@\r\n"
-					+ "@@ ..!!:-,.......*@@@@@@@@@@@@\r\n"
-					+ "@,,,@*..-:*!;!;!!=@@@@@@@@@@@@\r\n"
-					+ "@,,@@*...-*,...*@@@@@@@@@@@@@@\r\n"
-					+ "@@@@@=-,.**,...*@@@@@@@@@@@@@@\r\n"
-					+ "@@@@@@=====,,.!@@@@@@@@@@@@@@@\r\n"
-					+ "@@@@@@@@@@**!*=@@@@@@@@@@@@@@@");
+			
 			cookieName="딸기 쿠키";
 		}else {
 		 System.out.println("쿠키가 없습니다.");
@@ -155,7 +120,7 @@ public class MainSystem_cookie {
 			
 			System.out.println(cookieName+"를 더욱 강한 쿠키로 성장시켜주세요\r\n "
 					+ "쿠키정보\r\n" + "=================================\r\n"
-					+ "이름:용감한 쿠키\r\n" 
+					+ "이름:"+cookieName+"\r\n" 
 					+ "등급:"+grade+" 쿠키\r\n"
 					+ "공격력:" + atk + "\r\n"
 					+ "민첩력" + dex + "\r\n" 
@@ -169,66 +134,109 @@ public class MainSystem_cookie {
 			System.out.println("\r\n" 
 					+ day + "번째 날\r\n" 
 					+ "남은 훈련횟수: " + traincnt + "\r\n"
-					+ "=======================================================\r\n"
+					+ "============================================================\r\n"
 					+ "1.근력 훈련 2.민첩 훈련 3.체력 훈련 4.휴식 취하기 5.악당과 전투 6.쿠키 진화\r\n"
-					+ "=======================================================\r\n"
+					+ "============================================================\r\n"
 					+ "오늘 쿠키와 훈련 할 방법을 선택해주세요\r\n");
 			
 			int menu = sc.nextInt();
-			if (menu == 1 && traincnt > 0) {
+			if (menu == 1 && traincnt >0) {
 				atk += 5;  
+				traincnt--;
 				System.out.println(cookieName+"가 쇠질을 하며 공격력이 올라갔습니다. 현재 공격력: "+atk);
-				traincnt--;
-			} else if (menu == 2 && traincnt > 0) {
-				System.out.println(cookieName+"가 민첩 훈련을 하며 민첩성이 올라갔습니다 현재 민첩성 :"+dex);
-				dex += 5;
-				traincnt--;
+				
+				if(traincnt==0) {
+					System.out.println();
+					System.out.println();
+					System.out.println("================================================\r\n"
+							+ "훈련 횟수를 전부 소진했습니다 마을을 지키기 위한 전투를 준비하십시오\r\n"
+							+ "================================================");
+					
+				}
+			} else if (menu == 2 && traincnt >0) {
+					dex += 5;
+					traincnt--;
+					System.out.println(cookieName+"가 민첩 훈련을 하며 민첩성이 올라갔습니다 현재 민첩성 :"+dex);
+					if(traincnt==0) {
+						System.out.println();
+						System.out.println();
+					System.out.println("================================================\r\n"
+							+ "훈련 횟수를 전부 소진했습니다 마을을 지키기 위한 전투를 준비하십시오\r\n"
+							+ "===============================================");
+					
+				}
 			} else if (menu==3 && traincnt >0 ) {
-				System.out.println(cookieName+"가 유산소 운동을 하며 체력이 올라갔습니다 현재 체력"+maxHp);
-				maxHp += 10;
-				traincnt--;
+					maxHp += 10;
+					nowHp += 10;
+					traincnt--;
+					System.out.println(cookieName+"가 유산소 운동을 하며 체력이 올라갔습니다 현재 체력"+maxHp);
+					if(traincnt==0) {
+						System.out.println();
+						System.out.println();
+					System.out.println("================================================\r\n"
+							+ "훈련 횟수를 전부 소진했습니다 마을을 지키기 위한 전투를 준비하십시오\r\n"
+							+ "================================================");
+					
+				}
 			} else if (menu==4 && traincnt>0) {
 				System.out.println(cookieName+"가 휴식을 취합니다 체력이 완전히 회복됩니다");
 				nowHp=maxHp;
+				traincnt--;
+				if(traincnt==0) {
+					System.out.println();
+					System.out.println();
+					System.out.println("================================================\r\n"
+							+ "훈련 횟수를 전부 소진했습니다 마을을 지키기 위한 전투를 준비하십시오\r\n"
+							+ "================================================");
+					
+				}
+				
 			}else if(menu==5) {
 				if(grade.equals("하급")) {
-				enemy.enemy1(5, 100);
+				 enemy1.fight();
 				}else if(grade.equals("중급")) {
-					enemy.enemy2(50, 500);
+					enemy2.fight();
 				}else if(grade.equals("상급")) {
-					enemy.demon(100, 1000);
+					enemy3.fight();
 				}
 					System.out.println("용감한 쿠키에게 어떤 행동을 시키겠습니까? >>"
 							+ "1.공격 2.도망친다");
 				   int command =sc.nextInt();
 				
-				   while(enemy.enemyHp>0 && nowHp>0) {
+				   while(true) {
 				if(command==1) {
 					
-					enemy.enemyHp =enemy.enemyAtk(5)-atk;
+					enemyHp0 =enemyHp0-atk;
 					System.out.println("용감한 쿠키는 세균맨에게 쿠키 펀치를 날렸다"
-							+ atk+"의 피해를 입혔다 남은 세균맨 체력:"+enemy.enemyHp);
-					nowHp =nowHp-enemy.enemyAtk;
+							+ atk+"의 피해를 입혔다 남은 세균맨 체력:"+enemyHp0);
+					nowHp =nowHp-enemyAtk0;
 					System.out.println("세균맨이 용감한 쿠키에게 세균펀치를 날렸다"
-							+enemy.enemyAtk+"의 피해를 입혔다 남은 용감한 쿠키 체력:"+nowHp);
-					if(enemy.enemyHp<=0) {
+							+enemyAtk0+"의 피해를 입혔다 남은 용감한 쿠키 체력:"+nowHp);
+					if(enemyHp0<=0) {
 					System.out.println("100의 경험치를 얻었다! 진화를 할 수 있을 것 같다");
 					exp +=100;
 					day++;
+					traincnt=5;
+					break;
+					}else if(nowHp<=0) {
+						System.out.println(cookieName+"가 가루가 되고 쿠키마을은 악마에게 지배당했습니다 -END-");
+						break;
 				}else if(command==2) {
 					System.out.println("겁쟁이 쿠키는 부리나케 도망쳤다.");
 					break;
 				}
+				
 				}
-				   
-				   }
+				}
 			} else if(menu==6) {
 				if(exp >= 100) {
 					System.out.println(cookieName+"의 힘이 넘쳐나고 있습니다 쿠키의 진화를 선택해주세요 ");
 					System.out.println("1.날렵한 닌자 쿠키 2.강력한 레슬링 쿠키");
 					int upgrade=sc.nextInt();
 					exp=0;
-					if(upgrade==1){System.out.println("    .;                             \r\n"
+					if(upgrade==1){
+						System.out.println("    .;                             \r\n"
+					
 							+ "                 .*#                              \r\n"
 							+ "                .*@* ,~~,                         \r\n"
 							+ "                *@@,!=$=.                         \r\n"
@@ -279,8 +287,8 @@ public class MainSystem_cookie {
 				   		+ "공격력:"+atk+"\r\n"
 				   		+ "민첩성:"+dex+"\r\n"
 				   		+ "체력:"+maxHp+"\r\n");	
-				
 					
+						
 				}else if(upgrade==2) {
 					System.out.println("  .....                           \r\n"
 							+ "              .,,,;===*-.                         \r\n"
@@ -356,9 +364,13 @@ public class MainSystem_cookie {
 				
 		}
 		}
+			}
+			
 		}
 	}
+
+	
+
 		
-		
-	}
+	
 
