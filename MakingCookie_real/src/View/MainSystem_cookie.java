@@ -3,8 +3,19 @@ package View;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import controller.Brave;
+import controller.CHERRYCOOKIE;
+import controller.COTTON;
 import controller.CookieCon;
+import controller.Ending;
 import controller.MemberController;
+import controller.STRAWBERRY;
+import controller.angel;
+import controller.darkChoco;
+import controller.hongildong;
+import controller.muscleCooke;
+import controller.ninja;
+import controller.vanilaCookie;
 import model.MemberDTO;
 import model.enemy1;
 import model.enemy2;
@@ -164,7 +175,7 @@ public class MainSystem_cookie {
 		int exp = 0;
 		String grade = "하급";
 		String cookieName = null;
-		String enemyName = null;
+		String enemyName = "세균맨";
 		int day = 1;
 		int traincnt = 5;
 
@@ -172,16 +183,18 @@ public class MainSystem_cookie {
 		int enemyAtk = 0;
 
 		
-		String text = " 평화로운 쿠키마을에 사는 용맹한 전사 쿠키는 어느 날, 악당 초코몬스터와 그의 부하들이 공격해왔다. 마을은 파괴되고 주민들은 위협받고 있었다."
-				+ " 쿠키는 자신의 마을을 지키기 위해 전사로 일어나 악당에 맞서기로 결심한다. "
-				+ "그는 특별한 능력과 함께 무기를 갖추고, 모험과 도전 속에서 성장하며 친구들과 협력하여 마을을 되찾는 여정에 나선다. "
-				+ "악당을 물리치고 마을에 다시 평화가 찾아오게끔, 쿠키는 용감한 용사로서의 자부심을 얻는다.\r\n";
+		String text = " 평화로운 쿠키마을에 사는 용맹한 전사 쿠키!\r\n"
+				+ "어느날, 악당 몬스터와 그의 부하들이 공격해왔다.\r\n"
+				+ "그들은 쿠키마을을 파괴하고 주민들을 위협했다.\r\n"
+				+ "용맹한 전사 쿠키는 마을을 지키기 위해 악당들과 맞서기로 결심한다.\r\n"
+				+ "그는 특별한 능력과 무기를 갖추고 모험과 도전속에서 성장하며, 동료들과 함께 마을을 되찾는 여정을 떠난다.\r\n"
+				+ "악당을 물리치고 마을에 다시 평화가 찾아오길 바라며!! 쿠키키우기게임 시작!!\r\n";
 
 		for (int i = 0; i < text.length(); i++) {
 			System.out.print(text.charAt(i));
 
 			try {
-				Thread.sleep(0);
+				Thread.sleep(40);
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -203,10 +216,10 @@ public class MainSystem_cookie {
 		int Character = sc.nextInt();
 
 		if (Character == 1) {
-
+              Brave.askie();
 			cookieName = "용감한 쿠키";
 		} else if (Character == 2) {
-
+               STRAWBERRY.askie();
 			cookieName = "딸기 쿠키";
 		} else {
 			System.out.println("쿠키가 없습니다.");
@@ -215,7 +228,7 @@ public class MainSystem_cookie {
 		System.out.println(
 				cookieName + "를 더욱 강한 쿠키로 성장시켜주세요\r\n " + "쿠키정보\r\n" + "=================================\r\n" + "이름:"
 						+ cookieName + "\r\n" + "등급:" + grade + " 쿠키\r\n" + "공격력:" + atk + "\r\n" + "민첩력" + dex + "\r\n"
-						+ "체력:" + maxHp + "\r\n" + "경험치:" + exp + "/100\r\n" + "=================================\r\n");
+						+ "체력:" + maxHp + "\r\n" + "경험치:" + exp + "\r\n" + "=================================\r\n");
 
 			while (true) {
 				if (traincnt == 0) {
@@ -226,14 +239,14 @@ public class MainSystem_cookie {
 							+ "================================================");
 				}
 				System.out.println("\r\n" + day + "번째 날\r\n" + "남은 훈련횟수: " + traincnt + "\r\n"
-						+ "============================================================\r\n"
-						+ "1.근력 훈련 2.민첩 훈련 3.체력 훈련 4.휴식 취하기 5.악당과 전투 6.쿠키 진화\r\n"
-						+ "============================================================\r\n"
+						+ "====================================================\r\n"
+						+ "1.근력 훈련 2.민첩 훈련 3.체력 훈련 4.악당과 전투 5.쿠키 진화\r\n"
+						+ "====================================================\r\n"
 						+ "오늘 쿠키와 훈련 할 방법을 선택해주세요\r\n");
 				
 			int menu = sc.nextInt();
 			if (menu == 1 && traincnt > 0) {
-				atk += 5000;
+				atk += 10;
 				traincnt--;
 				System.out.println(cookieName + "가 쇠질을 하며 공격력이 올라갔습니다. 현재 공격력: " + atk);
 					
@@ -243,27 +256,14 @@ public class MainSystem_cookie {
 					System.out.println(cookieName + "가 민첩 훈련을 하며 민첩성이 올라갔습니다 현재 민첩성 :" + dex);
 					
 				} else if (menu == 3 && traincnt > 0) {
-					maxHp += 10;
-					nowHp += 10;
+					maxHp += 50;
+					nowHp += 30;
 					traincnt--;
 					System.out.println(cookieName + "가 유산소 운동을 하며 체력이 올라갔습니다 현재 체력" + maxHp);
 					
 						
 				
-			} else if (menu == 4 && traincnt > 0) {
-				System.out.println(cookieName + "가 휴식을 취합니다 체력이 완전히 회복됩니다");
-				nowHp = maxHp;
-				traincnt--;
-				if (traincnt == 0) {
-					System.out.println();
-					System.out.println();
-					System.out.println("================================================\r\n"
-							+ "훈련 횟수를 전부 소진했습니다 마을을 지키기 위한 전투를 준비하십시오\r\n"
-							+ "================================================");
-
-				}
-
-			} else if (menu == 5) {
+			} else if (menu == 4) {
 				if (grade.equals("하급")) {
 					enemyName = "세균맨";
 					enemyHp = 100;
@@ -280,80 +280,92 @@ public class MainSystem_cookie {
 					enemyAtk = 100;
 					enemy3.fight();
 				}
-				System.out.println("용감한 쿠키에게 어떤 행동을 시키겠습니까? >>" + "1.공격 2.도망친다");
+				System.out.println(cookieName+"에게 어떤 행동을 시키겠습니까? >>" + "1.공격 2.도망친다");
 				int command = sc.nextInt();
 
-				while (true) {
+				while(true){
 
 					if (command == 1) {
 
 						enemyHp = enemyHp - atk;
-						System.out.println(cookieName + "(은)는" + enemyName + "에게 쿠키 펀치를 날렸다" + atk + "의 피해를 입혔다 남은"
-								+ enemyName + "체력:" + enemyHp);
-						nowHp = nowHp - enemyAtk;
-						System.out.println(enemyName + "이(가)" + cookieName + "에게 세균펀치를 날렸다" + enemyAtk
-								+ "의 피해를 입혔다 남은 용감한 쿠키 체력:" + nowHp);
-						if (enemyHp <= 0) {
-							System.out.println("100의 경험치를 얻었다! 진화를 할 수 있을 것 같다");
+						System.out.println(cookieName + "(은)는 " + enemyName + "에게 쿠키 펀치를 날렸다 " + atk + "의 피해를 입혔다 남은 "
+								+ enemyName + " 체력:" + enemyHp);
+						if (enemyHp <= 0 && enemyName.equals("세균맨")) {
+							System.out.println("100의 경험치를 얻었다! 진화를 할 수 있을 것 같다\r\n");
 							exp += 100;
 							day++;
 							traincnt = 5;
+							nowHp=maxHp;
 							break;
-						} else if (nowHp <= 0) {
+						}else if(enemyHp <= 0 && enemyName.equals("추종자")) {
+							System.out.println("200의 경험치를 얻었다! 진화를 할 수 있을 것 같다\r\n");
+							exp += 200;
+							day++;
+							traincnt = 5;
+							nowHp=maxHp;
+							break;
+						}else if(enemyHp <= 0 && enemyName.equals("악마")) {
+							System.out.println("드디어 악마를 물리쳤다.쿠키 마을에 평화가 찾아올 것 같다!!\r\n");
+
+							break;
+						}
+							nowHp = nowHp - enemyAtk;
+							System.out.println(enemyName + "이(가) " + cookieName + "에게 "+enemyName+" 펀치를 날렸다 " + enemyAtk
+									+ "의 피해를 입혔다 남은 용감한 쿠키 체력:" + nowHp);
+					} else if (nowHp <= 0) {
 							System.out.println(cookieName + "가 가루가 되고 쿠키마을은 악마에게 지배당했습니다 -END-");
 							break;
 
-						}
+						
 					} else if (command == 2) {
 						System.out.println("겁쟁이 쿠키는 부리나케 도망쳤다.");
 						break;
 					}
 				}
-
-					
-				} else if (menu == 4 && traincnt > 0) {
-					System.out.println(cookieName + "가 휴식을 취합니다 체력이 완전히 회복됩니다");
-					nowHp = maxHp;
-					traincnt--;
 					
 
-
-				} else if (menu == 5) {
-			} else if (menu == 6) {
+					
+				
+			} else if (menu == 5) {
 				if (exp >= 100) {
-					if (grade.equals("하급")) {
-
+					if (cookieName.equals("용감한 쿠키")) {
+						System.out.println("============================================================");
 						System.out.println(cookieName + "의 힘이 넘쳐나고 있습니다 쿠키의 진화를 선택해주세요 ");
 						System.out.println("1.날렵한 닌자 쿠키 2.강력한 레슬링 쿠키");
+						System.out.println("============================================================");
 						int upgrade = sc.nextInt();
 						exp = 0;
 						if (upgrade == 1) {
-							System.out.println();
+							ninja.askie();
+							System.out.println("============================================================");
 
 							System.out.print(cookieName + "가 ");
 							cookieName = "닌자 쿠키";
 							System.out.println(cookieName + "(이)가 되었습니다" + cookieName
 									+ "(은)는 적의 약점을 노려 치명상을 입히는 날렵한 쿠키입니다\r\n" + "공격력과 체력이 오르고 민첩성이 크게 오릅니다\r\n");
+							System.out.println("============================================================");
 							grade = "중급";
 							exp = 0;
-							atk += 10;
+							atk += 40;
 							dex += 20;
-							maxHp += 100;
+							maxHp += 300;
 							System.out.println("현재" + cookieName + "의 능력치 정보\r\n" + "공격력:" + atk + "\r\n" + "민첩성:" + dex
 									+ "\r\n" + "체력:" + maxHp + "\r\n");
 
 
 							} else if (upgrade == 2) {
-								System.out.println();
+								muscleCooke.askie();
+								System.out.println("============================================================");
 								System.out.print(cookieName + "가 ");
 								cookieName = "레슬러 쿠키";
 								System.out.println(cookieName + "(이)가 되었습니다" + cookieName
 										+ "(은)는 강력한 힘으로 적을 제압하는 쿠키입니다\r\n" + "민첩성과 체력이 오르고 공격력이 크게 오릅니다\r\n");
+								System.out.println("============================================================");
 								grade = "중급";
 								exp = 0;
-								atk += 20;
+								atk += 40;
 								dex += 5;
-								maxHp += 200;
+								maxHp += 300;
 								System.out.println("현재" + cookieName + "의 능력치 정보\r\n" + "공격력:" + atk + "\r\n" + "민첩성:"
 									+ dex + "\r\n" + "체력:" + maxHp + "\r\n");
 							
@@ -362,34 +374,139 @@ public class MainSystem_cookie {
 						}
 
 					}
-				}if(grade.equals("중급")){
+				}if(cookieName.equals("닌자 쿠키")&& exp>=200){
+					hongildong.askie();
+					
+					System.out.println("============================================================");
+					System.out.print(cookieName + "가 ");
+					cookieName = "홍길동 쿠키";
+					System.out.println(cookieName + "(이)가 되었습니다" + cookieName
+							+ "(은)는 불의를 참지못하는 정의로운 쿠키입니다\r\n" 
+							+ "공격력과 체력이 오르고 민첩성이 크게 오릅니다\r\n");
+					System.out.println("============================================================");
+					grade = "상급";
+					exp = 0;
+					atk += 100;
+					dex += 50;
+					maxHp += 500;
+					System.out.println("현재" + cookieName + "의 능력치 정보\r\n" + "공격력:" + atk + "\r\n" + "민첩성:" + dex
+							+ "\r\n" + "체력:" + maxHp + "\r\n");
+
+				}else if(cookieName.equals("레슬러 쿠키")&& exp>=200){
+					darkChoco.askie();
+					
+					System.out.println("============================================================");
+					System.out.print(cookieName + "가 ");
+					cookieName = "다크초코 쿠키";
+					System.out.println(cookieName + "(이)가 되었습니다" + cookieName
+							+ "(은)는 강력한 다크초코의 힘 컨트롤하여 사용하는 쿠키입니다. \r\n" 
+							+ "공격력과 체력이 오르고 민첩성이 크게 오릅니다\r\n");
+					System.out.println("============================================================");
+					grade = "상급";
+					exp = 0;
+					atk += 100;
+					dex += 50;
+					maxHp += 500;
+					System.out.println("현재" + cookieName + "의 능력치 정보\r\n" + "공격력:" + atk + "\r\n" + "민첩성:" + dex
+							+ "\r\n" + "체력:" + maxHp + "\r\n");
+
+				}else if(cookieName.equals("딸기 쿠키") && exp>=100) {
+					System.out.println("============================================================");
+					System.out.println(cookieName + "의 힘이 넘쳐나고 있습니다 쿠키의 진화를 선택해주세요 ");
+					System.out.println("1.불의 정령 쿠키 2.바닐라 쿠키");
+					System.out.println("============================================================");
+					int upgrade = sc.nextInt();
+					exp = 0;
+					if (upgrade == 1) {
+						COTTON.askie();
+						System.out.println();
+						System.out.println("============================================================");
+						System.out.print(cookieName + "가 ");
+						cookieName = "불의 정령 쿠키";
+						System.out.println(cookieName + "(이)가 되었습니다" + cookieName
+								+ "(은)는 강력한 불의 힘을 사용하는 쿠키입니다\r\n" + "공격력과 체력이 오르고 민첩성이 크게 오릅니다\r\n");
+						System.out.println("============================================================");
+						grade = "중급";
+						exp = 0;
+						atk += 200;
+						dex += 20;
+						maxHp += 500;
+						System.out.println("현재" + cookieName + "의 능력치 정보\r\n" + "공격력:" + atk + "\r\n" + "민첩성:" + dex
+								+ "\r\n" + "체력:" + maxHp + "\r\n");
+
+
+						}else if(upgrade==2) {
+							vanilaCookie.askie();
+							System.out.println("============================================================");
+							System.out.print(cookieName + "가 ");
+							cookieName = "바닐라 쿠키";
+							System.out.println(cookieName + "(이)가 되었습니다" + cookieName
+									+ "(은)는 부드러운 바닐라의 힘으로 적을 제압하는 쿠키입니다\r\n" + "민첩성과 체력이 오르고 공격력이 크게 오릅니다\r\n");
+							System.out.println("============================================================");
+							grade = "중급";
+							exp = 0;
+							atk += 40;
+							dex += 5;
+							maxHp += 300;
+							System.out.println("현재" + cookieName + "의 능력치 정보\r\n" + "공격력:" + atk + "\r\n" + "민첩성:"
+								+ dex + "\r\n" + "체력:" + maxHp + "\r\n");
+							
+						}
 					
 					
+				}if(cookieName.equals("불의 정령 쿠키")&& exp>=200){
+					CHERRYCOOKIE.askie();
 					
+					System.out.println("============================================================");
+					System.out.print(cookieName + "가 ");
+					cookieName = "체리 쿠키";
+					System.out.println(cookieName + "(이)가 되었습니다" + cookieName
+							+ "(은)는 강력한 불의 광기에 휩싸여\r\n"
+							+ " 무자비한 파괴력을 보이는 쿠키입니다\r\n" 
+							+ "공격력과 체력이 오르고 민첩성이 크게 오릅니다\r\n");
+					System.out.println("============================================================");
+					grade = "상급";
+					exp = 0;
+					atk += 200;
+					dex += 50;
+					maxHp += 500;
+					System.out.println("현재" + cookieName + "의 능력치 정보\r\n" + "공격력:" + atk + "\r\n" + "민첩성:" + dex
+							+ "\r\n" + "체력:" + maxHp + "\r\n");
+
+				}else if(cookieName.equals("바닐라 쿠키")&& exp>=200){
+					angel.askie();
 					
-					
-					
-					
-					
+                   System.out.println("==============================================================");
+					System.out.print(cookieName + "가 ");
+					cookieName = "천사 쿠키";
+					System.out.println(cookieName + "(이)가 되었습니다" + cookieName
+							+ "(은)는 강력한 천사의 힘을 컨트롤하여 사용하는 쿠키입니다. \r\n"
+							+ "그녀 앞에서는 모든 악의 힘이 무용지물이 될 것 입니다." 
+							+ "공격력과 체력이 오르고 민첩성이 크게 오릅니다\r\n");
+					System.out.println("============================================================");
+					grade = "상급";
+					exp = 0;
+					atk += 200;
+					dex += 50;
+					maxHp += 500;
+					System.out.println("현재" + cookieName + "의 능력치 정보\r\n" + "공격력:" + atk + "\r\n" + "민첩성:" + dex
+							+ "\r\n" + "체력:" + maxHp + "\r\n");
+
 				}
-				
-				
-				
 				
 				
 				
 			} 
 			
+		
+			if(enemyName.equals("악마")&&enemyHp<=0) {
+				break;
+			}
+		}Ending.End();
 			
 			
 			
 			
-			
-			
-			
-			
-			
-		}
 	}
 
 }

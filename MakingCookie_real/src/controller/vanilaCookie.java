@@ -2,7 +2,7 @@ package controller;
 
 public class vanilaCookie {
 	
-	public static void vanila() {
+	public static void askie() {
 		
 		
 		System.out.println("\r\n"

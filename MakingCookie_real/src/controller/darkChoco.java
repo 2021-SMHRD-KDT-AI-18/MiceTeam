@@ -2,7 +2,7 @@ package controller;
 
 public class darkChoco {
 	
-	public static void  darkchoco() {
+	public static void  askie() {
 		
 	System.out.println("\r\n"
 			+ "\r\n"

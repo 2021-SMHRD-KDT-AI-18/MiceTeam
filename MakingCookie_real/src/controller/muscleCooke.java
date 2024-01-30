@@ -4,7 +4,7 @@ public class muscleCooke  {
 	
 	
 	
-	public static void muscleCookie() {
+	public static void askie() {
 		
 		System.out.println("\r\n"
 				+ "\r\n"
