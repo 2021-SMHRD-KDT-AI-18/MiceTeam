@@ -43,8 +43,8 @@ public class MainSystem_cookie {
 	      Music m2 = new Music("석류마을 브금","C:\\music_v2\\쿠키런_-킹덤_-공식-OST-_너를-찾을게_-MV.mp3");
 	      Music m3 = new Music("전투! 레드, Lebo M.","C:\\music_v2\\쿠키런_-킹덤_-석류마을-브금_join.mp3");
 	      Music m4 = new Music("이세계 판타지 브금","C:\\music_v2\\전투_-레드-_-리마스터-_-Battle_-Red.mp3");
-	      Music m5 = new Music("훈련","C:\\music_v2\\훈련 효과음.m4a");
-	      Music m6 = new Music("앤딩","C:\\music_v2\\엔딩 티모송.mp3");
+	      Music m5 = new Music("앤딩","C:\\music_v2\\티모송1 (online-audio-converter.com).mp3");
+	      Music m6 = new Music("앤딩","C:\\music_v2\\훈련 효과음2 (online-audio-converter.com).mp3");
 	      
 
 	      list1.add(m1);
@@ -53,6 +53,7 @@ public class MainSystem_cookie {
 	      list1.add(m4);
 	      list1.add(m5);
 	      list1.add(m6);
+	      
 	      
 	      MP3Player mp3 = new MP3Player();
 	      if(mp3.isPlaying()) {
@@ -77,98 +78,98 @@ public class MainSystem_cookie {
 						+ "               .@@#-      =*.      *@@=  !!       *@@:      .@@@       ;!.      !@@; .=@#,          \r\n"
 						+ "                ---                ,--,           ,--.       ---                ,--,  ,!-           ");
 
-//		while (true) {
-//			// CRUD create read update delete 최소한의 기능들
-//			System.out.println("1.회원등록 2.로그인 3.회원목록 4.회원탈퇴 5.회원정보수정 6.종료 >>");
-//			int menu = sc.nextInt();
-//			if (menu == 1) {
-//				System.out.println("=====회원등록=====");
-//				System.out.println("ID입력: ");
-//				String id = sc.next();
-//				System.out.println("PW입력: ");
-//				String pw = sc.next();
-//				System.out.println("NAME입력: ");
-//				String name = sc.next();
-//				System.out.println("AGE입력: ");
-//				int age = sc.nextInt();
-//				// JDBC-회원등록
-//				// 1.드라이버 로드(동적로딩)
-//				// 컴파일러가 아래 코드를 보고 해당 드라이버를 찾아가서 적용하기 때문
-//
-//				dto = new MemberDTO(id, pw, name, age);
-//
-//				int cnt = controller.join(dto);
-//
-//				if (cnt > 0) {
-//					System.out.println("회원등록 성공");
-//				} else {
-//					System.out.println("회원등록 실패");
-//				}
-//			} else if (menu == 2) {
-//				System.out.println("=====로그인=====");
-//
-//				System.out.print("ID 입력 : ");
-//				String id = sc.next();
-//				System.out.print("PW 입력 :");
-//				String pw = sc.next();
-//
-//				MemberDTO info = controller.login(id, pw);
-//				if (info != null) {
-//					System.out.println(info.getName() + "님 환영합니다");
-//				}
-//				break;
-//			} else if (menu == 3) {
-//				System.out.println("========전체 회원 목록 조회=======");
-//				System.out.println("ID\tPW\tName\tAGE");
-//				ArrayList<MemberDTO> list = controller.memberList();
-//				for (int i = 0; i < list.size(); i++) {
-//					System.out.print(list.get(i).getId() + "\t");
-//					System.out.print(list.get(i).getPw() + "\t");
-//					System.out.print(list.get(i).getName() + "\t");
-//					System.out.println(list.get(i).getAge() + "\t");
-//
-//				}
-//			} else if (menu == 4) {
-//				System.out.println("=======회원탈퇴=========");
-//				System.out.println("ID 입력:");
-//				String id = sc.next();
-//
-//				int cnt = controller.delete(id);
-//				if (cnt > 0) {
-//					System.out.println("회원탈퇴 성공");
-//				} else {
-//					System.out.println("회원탈퇴 실패");
-//				}
-//
-//			} else if (menu == 5) {
-//				System.out.println("========회원정보수정======");
-//				// id와 일치하는 회원의 pw,name,age를 수정
-//				System.out.println("ID 입력:");
-//				String id = sc.next();
-//				System.out.println("수정할 pw 입력:");
-//				String pw = sc.next();
-//				System.out.println("수정할 name 입력:");
-//				String name = sc.next();
-//				System.out.println("수정할 age 입력:");
-//				int age = sc.nextInt();
-//
-//				dto = new MemberDTO(id, pw, name, age);
-//				int cnt = controller.update(dto);
-//				if (cnt > 0) {
-//					System.out.println("회원정보 수정 성공");
-//				} else {
-//					System.out.println("회원정보수정 실패");
-//				}
-//
-//			} else if (menu == 6) {
-//				System.out.println("프로그램을 종료합니다");
-//				sc.close();
-//				break;
-//			} else {
-//				System.out.println("정확한 숫자입력해주세요");
-//			} 
-//
-//		} 
+		while (true) {
+			// CRUD create read update delete 최소한의 기능들
+			System.out.println("1.회원등록 2.로그인 3.회원목록 4.회원탈퇴 5.회원정보수정 6.종료 >>");
+			int menu = sc.nextInt();
+			if (menu == 1) {
+				System.out.println("=====회원등록=====");
+				System.out.println("ID입력: ");
+				String id = sc.next();
+				System.out.println("PW입력: ");
+				String pw = sc.next();
+				System.out.println("NAME입력: ");
+				String name = sc.next();
+				System.out.println("AGE입력: ");
+				int age = sc.nextInt();
+				// JDBC-회원등록
+				// 1.드라이버 로드(동적로딩)
+				// 컴파일러가 아래 코드를 보고 해당 드라이버를 찾아가서 적용하기 때문
+
+				dto = new MemberDTO(id, pw, name, age);
+
+				int cnt = controller.join(dto);
+
+				if (cnt > 0) {
+					System.out.println("회원등록 성공");
+				} else {
+					System.out.println("회원등록 실패");
+				}
+			} else if (menu == 2) {
+				System.out.println("=====로그인=====");
+
+				System.out.print("ID 입력 : ");
+				String id = sc.next();
+				System.out.print("PW 입력 :");
+				String pw = sc.next();
+
+				MemberDTO info = controller.login(id, pw);
+				if (info != null) {
+					System.out.println(info.getName() + "님 환영합니다");
+				}
+				break;
+			} else if (menu == 3) {
+				System.out.println("========전체 회원 목록 조회=======");
+				System.out.println("ID\tPW\tName\tAGE");
+				ArrayList<MemberDTO> list = controller.memberList();
+				for (int i = 0; i < list.size(); i++) {
+					System.out.print(list.get(i).getId() + "\t");
+					System.out.print(list.get(i).getPw() + "\t");
+					System.out.print(list.get(i).getName() + "\t");
+					System.out.println(list.get(i).getAge() + "\t");
+
+				}
+			} else if (menu == 4) {
+				System.out.println("=======회원탈퇴=========");
+				System.out.println("ID 입력:");
+				String id = sc.next();
+
+				int cnt = controller.delete(id);
+				if (cnt > 0) {
+					System.out.println("회원탈퇴 성공");
+				} else {
+					System.out.println("회원탈퇴 실패");
+				}
+
+			} else if (menu == 5) {
+				System.out.println("========회원정보수정======");
+				// id와 일치하는 회원의 pw,name,age를 수정
+				System.out.println("ID 입력:");
+				String id = sc.next();
+				System.out.println("수정할 pw 입력:");
+				String pw = sc.next();
+				System.out.println("수정할 name 입력:");
+				String name = sc.next();
+				System.out.println("수정할 age 입력:");
+				int age = sc.nextInt();
+
+				dto = new MemberDTO(id, pw, name, age);
+				int cnt = controller.update(dto);
+				if (cnt > 0) {
+					System.out.println("회원정보 수정 성공");
+				} else {
+					System.out.println("회원정보수정 실패");
+				}
+
+			} else if (menu == 6) {
+				System.out.println("프로그램을 종료합니다");
+				sc.close();
+				break;
+			} else {
+				System.out.println("정확한 숫자입력해주세요");
+			} 
+
+		} 
 
 		ArrayList<enemy> enemys = new ArrayList<>();
 		enemy enemy1 = new enemy1("세균맨", 5, 50);
@@ -388,7 +389,12 @@ public class MainSystem_cookie {
 						if (upgrade == 1) {
 							ninja.askie();
 							System.out.println("============================================================");
-
+							
+							if(mp3.isPlaying()) {
+					              mp3.stop();
+					           }
+					           
+					           mp3.play((m6).getPath());
 							System.out.print(cookieName + "가 ");
 							cookieName = "닌자 쿠키";
 							System.out.println(cookieName + "(이)가 되었습니다" + cookieName
@@ -406,6 +412,11 @@ public class MainSystem_cookie {
 							} else if (upgrade == 2) {
 								muscleCooke.askie();
 								System.out.println("============================================================");
+								if(mp3.isPlaying()) {
+						              mp3.stop();
+						           }
+						           
+						           mp3.play((m6).getPath());
 								System.out.print(cookieName + "가 ");
 								cookieName = "레슬러 쿠키";
 								System.out.println(cookieName + "(이)가 되었습니다" + cookieName
@@ -426,7 +437,11 @@ public class MainSystem_cookie {
 					}
 				}if(cookieName.equals("닌자 쿠키")&& exp>=200){
 					hongildong.askie();
-					
+					if(mp3.isPlaying()) {
+			              mp3.stop();
+			           }
+			           
+			           mp3.play((m6).getPath());
 					System.out.println("============================================================");
 					System.out.print(cookieName + "가 ");
 					cookieName = "홍길동 쿠키";
@@ -444,7 +459,11 @@ public class MainSystem_cookie {
 
 				}else if(cookieName.equals("레슬러 쿠키")&& exp>=200){
 					darkChoco.askie();
-					
+					if(mp3.isPlaying()) {
+			              mp3.stop();
+			           }
+			           
+			           mp3.play((m6).getPath());
 					System.out.println("============================================================");
 					System.out.print(cookieName + "가 ");
 					cookieName = "다크초코 쿠키";
@@ -461,6 +480,7 @@ public class MainSystem_cookie {
 							+ "\r\n" + "체력:" + maxHp + "\r\n");
 
 				}else if(cookieName.equals("딸기 쿠키") && exp>=100) {
+					
 					System.out.println("============================================================");
 					System.out.println(cookieName + "의 힘이 넘쳐나고 있습니다 쿠키의 진화를 선택해주세요 ");
 					System.out.println("1.불의 정령 쿠키 2.바닐라 쿠키");
@@ -468,6 +488,11 @@ public class MainSystem_cookie {
 					int upgrade = sc.nextInt();
 					exp = 0;
 					if (upgrade == 1) {
+						if(mp3.isPlaying()) {
+				              mp3.stop();
+				           }
+				           
+				           mp3.play((m6).getPath());
 						COTTON.askie();
 						System.out.println();
 						System.out.println("============================================================");
@@ -486,6 +511,11 @@ public class MainSystem_cookie {
 
 
 						}else if(upgrade==2) {
+							if(mp3.isPlaying()) {
+					              mp3.stop();
+					           }
+					           
+					           mp3.play((m6).getPath());
 							vanilaCookie.askie();
 							System.out.println("============================================================");
 							System.out.print(cookieName + "가 ");
@@ -505,7 +535,11 @@ public class MainSystem_cookie {
 					
 					
 				}if(cookieName.equals("불의 정령 쿠키")&& exp>=200){
-					CHERRYCOOKIE.askie();
+					CHERRYCOOKIE.askie();if(mp3.isPlaying()) {
+			              mp3.stop();
+			           }
+			           
+			           mp3.play((m6).getPath());
 					
 					System.out.println("============================================================");
 					System.out.print(cookieName + "가 ");
@@ -525,7 +559,11 @@ public class MainSystem_cookie {
 
 				}else if(cookieName.equals("바닐라 쿠키")&& exp>=200){
 					angel.askie();
-					
+					if(mp3.isPlaying()) {
+			              mp3.stop();
+			           }
+			           
+			           mp3.play((m6).getPath());
                    System.out.println("==============================================================");
 					System.out.print(cookieName + "가 ");
 					cookieName = "천사 쿠키";
@@ -553,14 +591,14 @@ public class MainSystem_cookie {
 				if(mp3.isPlaying()) {
 		              mp3.stop();
 		           }
-		           
-		           mp3.play((m6).getPath());
+		           mp3.play((m5).getPath());
+			Ending.End();
+			Ending.ending2();
 				break;
 			}
-		}Ending.End();
 			
 			
-			
+			}
 			
 	}
 
